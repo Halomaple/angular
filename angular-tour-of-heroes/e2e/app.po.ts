@@ -10,6 +10,6 @@ export class AppPage {
 	}
 
 	getHeroesText() {
-		return element(by.css('app-heroes')).getText();
+		return element(by.css('app-heroes div:last-child')).getText();
 	}
 }

@@ -22,4 +22,12 @@ describe('HeroesComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy();
 	});
+
+	it('should show a heroes list', () => {
+		expect(component.heroes.length).toBe(10);
+		expect(component.heroes[0].id).toBe(11);
+		expect(component.heroes[0].name).toBe('Mr. Nice');
+		expect(component.heroes[9].id).toBe(20);
+		expect(component.heroes[9].name).toBe('Tornado');
+	});
 });

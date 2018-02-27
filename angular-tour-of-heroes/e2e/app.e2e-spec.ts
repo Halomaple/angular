@@ -12,8 +12,8 @@ describe('angular-tour-of-heroes App', () => {
 		expect(page.getParagraphText()).toEqual('Tour of Heroes');
 	});
 
-	it(`should display hero 'Windstorm'`, () => {
+	it(`should display hero list`, () => {
 		page.navigateTo();
-		expect(page.getHeroesText()).toContain('Windstorm');
+		expect(page.getHeroListTitleText()).toContain('My Heroes');
 	});
 });

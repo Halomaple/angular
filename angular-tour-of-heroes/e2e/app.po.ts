@@ -9,7 +9,7 @@ export class AppPage {
 		return element(by.css('app-root h1')).getText();
 	}
 
-	getHeroesText() {
-		return element(by.css('app-heroes div:last-child')).getText();
+	getHeroListTitleText() {
+		return element(by.css('app-heroes h2')).getText();
 	}
 }

@@ -1,11 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
+
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
 	beforeEach(async(() => {
@@ -16,8 +19,8 @@ describe('AppComponent', () => {
 				HeroDetailComponent,
 				MessagesComponent,
 			],
-			providers: [HeroService, MessageService],
-			imports: [FormsModule]
+			providers: [HeroService, MessageService, { provide: APP_BASE_HREF, useValue: '/' }],
+			imports: [FormsModule, AppRoutingModule]
 		}).compileComponents();
 	}));
 	it('should create the app', async(() => {
